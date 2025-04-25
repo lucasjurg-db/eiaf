@@ -1,0 +1,31 @@
+{
+  "evaluation" : {
+    "source" : {
+      "name" : "count(1)",
+      "display" : "count(1)",
+      "aggregation" : "SUM"
+    },
+    "comparison_operator" : "EQUAL",
+    "threshold" : {
+      "value" : {
+        "double_value" : 9.999999999999E12
+      }
+    },
+    "notification" : {
+      "retrigger_seconds" : 0,
+      "notify_on_ok" : false
+    }
+  },
+  "schedule" : {
+    "quartz_cron_schedule" : "27 30 0 24 * ?",
+    "timezone_id" : "America/New_York"
+  },
+  "query_lines" : [
+    "SELECT",
+    "  COUNT(*)",
+    "FROM",
+    "  `main`.`jurgensen`.`hts_2025_revision_10_csv`",
+    "WHERE",
+    "  `Description` ILIKE '%horse%'"
+  ]
+}
