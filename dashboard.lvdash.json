@@ -2,7 +2,7 @@
   "datasets" : [ {
     "name" : "5b478c35",
     "displayName" : "horse-related",
-    "query" : "SELECT *, LENGTH(`Description`) AS `Description Length`\nFROM main.jurgensen.hts_2025_revision_10_csv\nWHERE `Description` ILIKE '%horse%'"
+    "query" : "SELECT *, LENGTH(`Description`) AS `Description Length`\nFROM main.jurgensen.hts_2025_revision_10_csv\nWHERE `Description` ILIKE '%dog%'"
   } ],
   "pages" : [ {
     "name" : "fa3c2eb7",
